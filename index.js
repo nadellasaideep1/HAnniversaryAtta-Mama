@@ -293,7 +293,10 @@ function reveal() {
   }
 
   var ifrm = document.createElement("iframe");
-iframe.setAttribute('allowFullScreen', 'https://www.youtube.com/embed/UXsdxX74ros?controls=1&loop=1&autoplay=1')
+  iframe.allowFullScreen = true
+iframe.mozallowFullScreen = true
+iframe.webkitallowFullScreen = true
+iframe.setAttribute('src', 'https://www.youtube.com/embed/UXsdxX74ros?controls=1&loop=1&autoplay=1')
   iframe.style.border = 'none';
   document.querySelector('#video').appendChild(ifrm);
 }
